@@ -12,6 +12,7 @@
 
 @protocol CCUIViewWrapperTextEditingDelegate
 @optional
+- (void)ccUIViewWrapperStartedEditing:(CCUIViewWrapper*)wrapper;
 - (void)ccUIViewWrapperFinishedEditing:(CCUIViewWrapper*)wrapper;
 @end
 

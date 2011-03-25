@@ -144,6 +144,12 @@ void printFrame(CGRect rect){
  * – textFieldShouldReturn:
  */
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    if (delegate && [((NSObject*)delegate) respondsToSelector:@selector(ccUIViewWrapperStartedEditing:)]) {
+        [delegate ccUIViewWrapperStartedEditing:self];
+    }
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if (delegate && [((NSObject*)delegate) respondsToSelector:@selector(ccUIViewWrapperFinishedEditing:)]) {
         [delegate ccUIViewWrapperFinishedEditing:self];
@@ -233,6 +239,13 @@ void printFrame(CGRect rect){
  
  * – textViewDidChangeSelection:
  */
+
+- (void)textViewDidBeginEditing:(UITextView *)textView{
+    if (delegate && [((NSObject*)delegate) respondsToSelector:@selector(ccUIViewWrapperStartedEditing:)]) {
+        [delegate ccUIViewWrapperStartedEditing:self];
+    }
+}
+
 - (void)textViewDidEndEditing:(UITextView*)textView{
     if (delegate && [((NSObject*)delegate) respondsToSelector:@selector(ccUIViewWrapperFinishedEditing:)]) {
         [delegate ccUIViewWrapperFinishedEditing:self];
