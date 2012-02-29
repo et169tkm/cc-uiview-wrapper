@@ -40,7 +40,7 @@ void printFrame(CGRect rect){
 
 - (void)visit{
     //NSLog(@"[%@ visit]", [self class]);
-    uiView.opaque = visible_;
+    uiView.hidden != visible_;
     [super visit];
 }
 
