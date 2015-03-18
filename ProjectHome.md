@@ -1,0 +1,2 @@
+This project aims at wrapping UIView components in a CCNode so that the UIView can be operated like a CCNode (except that it always floats on top).
+This project starts with UITextField and UITextView to entertain the need for text input needs in Cocos2D projects
